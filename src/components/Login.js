@@ -1,5 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { checkValidData } from '../utils/validate';
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../utils/firebase";
 
 const Login = () => {
     const [signUpMode, setSignUpMode] = useState(false);
@@ -19,6 +21,25 @@ const Login = () => {
         console.log(password.current.value);
         const validData = checkValidData(email.current.value, password.current.value);
         setValidationError(validData);
+        if(validData) return;
+
+        if(!signUpMode){
+           //
+        }else{
+            createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+              // Signed up 
+              const user = userCredential.user;
+              console.log(user);
+              // ...
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              setValidationError(errorCode+" - "+errorMessage)
+              // ..
+            });
+        }
     }
     return (
         <div className="w-full max-w-xs mx-auto">

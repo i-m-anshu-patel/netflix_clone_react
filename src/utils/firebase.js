@@ -2,16 +2,20 @@
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCeYnZLwl8uD2xhhJIvJyWZD_TnjN0Fw_M",
-  authDomain: "netflix-clone-cb449.firebaseapp.com",
-  projectId: "netflix-clone-cb449",
-  storageBucket: "netflix-clone-cb449.appspot.com",
-  messagingSenderId: "282611926267",
-  appId: "1:282611926267:web:2b5936336244c44764dc5e"
+  apiKey: "AIzaSyD7r4kNk0WVhNwVKLBMG6U5QRh_wIsC0FQ",
+  authDomain: "netwatch-f80cb.firebaseapp.com",
+  projectId: "netwatch-f80cb",
+  storageBucket: "netwatch-f80cb.appspot.com",
+  messagingSenderId: "383462985236",
+  appId: "1:383462985236:web:44439ee116968355fc2101"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+
+export const auth = getAuth();
