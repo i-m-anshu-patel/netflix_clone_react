@@ -26,7 +26,7 @@ const Login = () => {
         if(!signUpMode){
            //
         }else{
-            createUserWithEmailAndPassword(auth, email, password)
+            createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
             .then((userCredential) => {
               // Signed up 
               const user = userCredential.user;
