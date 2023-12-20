@@ -2,10 +2,13 @@ import React, { useRef, useState } from 'react'
 import { checkValidData } from '../utils/validate';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword  } from "firebase/auth";
 import { auth } from "../utils/firebase";
+import { useDispatch } from 'react-redux';
+import { loginUser } from '../utils/redux/userSlice';
 
 const Login = () => {
     const [signUpMode, setSignUpMode] = useState(false);
     const [validationError, setValidationError] = useState(null);
+    const dispatch = useDispatch();
     const handleSignUpMode = () => {
         if(signUpMode){
             setSignUpMode(false);
@@ -18,7 +21,7 @@ const Login = () => {
     const password = useRef(null);
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(password.current.value);
+    
         const validData = checkValidData(email.current.value, password.current.value);
         setValidationError(validData);
         if(validData) return;
@@ -28,7 +31,9 @@ const Login = () => {
             .then((userCredential) => {
               // Signed in 
               const user = userCredential.user;
+              console.log(user);
               // ...
+              dispatch(loginUser(user.email))
             })
             .catch((error) => {
               const errorCode = error.code;
