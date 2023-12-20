@@ -9,3 +9,12 @@ export const checkValidData = (email , password) => {
     return null;
 
 }
+
+
+export const checkValidName = (name) => {
+    if(name.length <= 3){
+        return "Name should be more than 3 characters"
+    }
+
+    return null;
+}
