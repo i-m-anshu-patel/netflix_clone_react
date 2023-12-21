@@ -1,15 +1,22 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { checkValidData, checkValidName } from '../utils/validate';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { loginUser } from '../utils/redux/userSlice';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [signUpMode, setSignUpMode] = useState(false);
     const [validationError, setValidationError] = useState(null);
+    const user = useSelector((store) => store.user.users);
     const navigate = useNavigate();
+    
+    useEffect(() => {
+        if(user.length > 0){
+            navigate('/browse')
+         }
+    }, [])
     const dispatch = useDispatch();
     const handleSignUpMode = () => {
         if (signUpMode) {
