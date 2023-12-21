@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { auth } from '../utils/firebase';
 import { Link, useNavigate } from 'react-router-dom';
 import { logoutUser } from '../utils/redux/userSlice';
+import { LOGO } from '../utils/constants';
 
 const Header = () => {
   const user = useSelector((store) => store.user.users)
@@ -37,7 +38,7 @@ const Header = () => {
   }, [])
   return (
     <div className='bg-gradient-to-b from-black flex'>
-      <Link to="/"><img className='h-42 w-56' src='https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png' alt='somneImg' /></Link>
+      <Link to="/"><img className='h-42 w-56' src={LOGO} alt='somneImg' /></Link>
       {user.length > 0 && (
         <div className='ml-auto mt-4 relative'>
           <button className='text-xl text-white/75  font-bold font-sans' onClick={handleDropdown}>
