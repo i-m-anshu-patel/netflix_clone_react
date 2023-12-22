@@ -37,7 +37,7 @@ const Header = () => {
     }
   }, [])
   return (
-    <div className='bg-gradient-to-b from-black flex'>
+    <div className={user.length>0 ?'bg-black flex' :'bg-gradient-to-b from-black flex'}>
       <Link to="/"><img className='h-42 w-56' src={LOGO} alt='somneImg' /></Link>
       {user.length > 0 && (
         <div className='ml-auto mt-4 relative'>
