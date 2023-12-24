@@ -1,9 +1,13 @@
 import React from 'react'
 
-const MainContainer = () => {
+const MainContainer = ({movie}) => {
+    console.log(movie);
+    const movieId = movie.id;
   return (
-    <div className='bg-black'>
-      MainContainer
+    <div>
+     <p>{movie.original_title}</p>
+      <p>{movie.overview}</p>
+      <button>Play Now</button>
     </div>
   )
 }

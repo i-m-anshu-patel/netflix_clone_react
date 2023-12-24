@@ -1,8 +1,8 @@
 import React from 'react'
 
-const SecondaryContainer = () => {
+const SecondaryContainer = ({movies}) => {
   return (
-    <div className='bg-black'>
+    <div >
       Secondary container
     </div>
   )
