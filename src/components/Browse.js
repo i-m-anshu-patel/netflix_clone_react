@@ -21,11 +21,11 @@ const Browse = () => {
   return isLoading ? (
     <h1>Loading....</h1>
   ) : (
-    <div className={(user.length > 0 ? 'bg-white ' : '') + 'grid grid-cols-2'}>
+    <div className={user.length > 0 ? 'bg-white ' : ''}>
       {moviesList && moviesList.length > 0 && (
         <>
-          <MainContainer movie={moviesList[0]} /> {/* Pass the first movie */}
-          <SecondaryContainer movies={moviesList} /> {/* Pass the entire movies list */}
+          <MainContainer movie={moviesList[0]} /> 
+          <SecondaryContainer movies={moviesList} /> 
         </>
       )}
     </div>
