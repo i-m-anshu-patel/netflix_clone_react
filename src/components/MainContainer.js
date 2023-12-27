@@ -17,12 +17,12 @@ const MainContainer = ({ movie }) => {
         <div className='relative'>
             <VideoBackGround videoKey={mainMovieDetail[0].key} />
             <div className='grid grid-cols-2 pl-2 aspect-video bg-gradient-to-r from-black text-white absolute top-0 left-0'>
-                <div className='m-16 pt-36'>
-                    <p className='text-3xl'>{movie.original_title}</p>
-                    <p className='text-lg pt-2'>{movie.overview}</p>
+                <div className='m-16 pt-[30%]'>
+                    <p className='text-3xl w-1/2'>{movie.original_title}</p>
+                    <p className='text-lg pt-2 w-3/4'>{movie.overview}</p>
                     <div className='flex'>
-                        <button className='mt-3'>Play Now</button>
-                        <button className='mt-3 ml-2'>More info</button>
+                        <button className='mt-3 rounded bg-white p-3 text-black font-bold opacity-80'>Play Now</button>
+                        <button className='mt-3 ml-3 rounded bg-red-500 p-3'>More info</button>
                     </div>
                 </div>
                 <div>

@@ -1,9 +1,10 @@
 import React from 'react'
 
 const SecondaryContainer = ({movies}) => {
+    console.log(movies);
   return (
     <div >
-      Secondary container
+      SecondaryContainer
     </div>
   )
 }
