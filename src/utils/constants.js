@@ -7,3 +7,5 @@ export const MOVIE_LIST = "https://api.themoviedb.org/3/movie/now_playing?langua
 
 export const MOVIE_DETAILS_PART1 = "https://api.themoviedb.org/3/movie/"
 export const MOVIE_DETAILS_PART2 = "/videos"
+
+export const IMG_CDN_LINK = "https://image.tmdb.org/t/p/w500/"

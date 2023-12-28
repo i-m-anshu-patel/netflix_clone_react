@@ -1,9 +1,12 @@
 import React from 'react'
+import MovieCard from './MovieCard'
 
-const MovieCarousal = () => {
+const MovieCarousal = ({movies}) => {
   return (
-    <div>
-      MovieCarousal
+    <div className='flex overflow-x-scroll'>
+      {movies && movies.map((movie) => (
+        <MovieCard movie={movie} />
+      ))}
     </div>
   )
 }
