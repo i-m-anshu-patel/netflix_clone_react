@@ -5,8 +5,23 @@ const SecondaryContainer = ({movies}) => {
     console.log(movies);
   return (
     <div>
-        <p>Now Playing</p>
-      <MovieCarousal movies={movies} />
+        <div>
+            <p className='text-xl font-bold '>Now Playing</p>
+            <MovieCarousal movies={movies} />
+        </div>
+        <div className='mt-3'>
+            <p className='text-xl font-bold '>Popular Movies</p>
+            <MovieCarousal movies={movies} />
+        </div>
+        <div className='mt-3'>
+            <p className='text-xl font-bold '>Trending</p>
+            <MovieCarousal movies={movies} />
+        </div>
+        <div className='mt-3'>
+            <p className='text-xl font-bold '>Now Playing</p>
+            <MovieCarousal movies={movies} />
+        </div>
+      
     </div>
   )
 }
