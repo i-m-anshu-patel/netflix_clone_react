@@ -9,3 +9,9 @@ export const MOVIE_DETAILS_PART1 = "https://api.themoviedb.org/3/movie/"
 export const MOVIE_DETAILS_PART2 = "/videos"
 
 export const IMG_CDN_LINK = "https://image.tmdb.org/t/p/w500/"
+
+export const POPULAR_MOVIES = "https://api.themoviedb.org/3/movie/popular"
+
+export const TOP_RATED_MOVIES = "https://api.themoviedb.org/3/movie/top_rated"
+
+export const UPCOMING_MOVIES = "https://api.themoviedb.org/3/movie/upcoming"
