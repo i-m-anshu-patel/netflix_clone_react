@@ -9,6 +9,7 @@ import Login from './components/Login';
 import Header from './components/Header';
 import Browse from './components/Browse';
 import { BACKGROUND_IMG } from './utils/constants';
+import Search from './components/Search';
 
 const App = () => {
   const styleBackground = {
@@ -22,6 +23,7 @@ const App = () => {
           <Routes>
             <Route exact path='/' element={<Login />} />
             <Route exact path='/browse' element={<Browse />} />
+            <Route exact path='/search' element={<Search />} />
           </Routes>
         </Provider>
       </BrowserRouter>

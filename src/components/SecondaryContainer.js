@@ -30,21 +30,21 @@ const SecondaryContainer = ({ movies }) => {
     }, [upcomingMoviesList])
 
     return (
-        <div className='-mt-20  relative z-50 '>
-            <div>
+        <div className='bg-black'>
+            <div className='-mt-20  relative z-50 '>
                 <p className='text-xl font-bold ml-2 text-white mb-2'>Now Playing</p>
                 <MovieCarousal movies={movies} />
             </div>
             <div className='mt-3'>
-                <p className='text-xl font-bold ml-2  mb-2'>Popular Movies</p>
+                <p className='text-xl font-bold ml-2 text-white  mb-2'>Popular Movies</p>
                 <MovieCarousal movies={popularMovies} />
             </div>
             <div className='mt-3'>
-                <p className='text-xl font-bold ml-2  mb-2'>Top Rated Movies</p>
+                <p className='text-xl font-bold ml-2 text-white mb-2'>Top Rated Movies</p>
                 <MovieCarousal movies={topRatedMovies} />
             </div>
             <div className='mt-3'>
-                <p className='text-xl font-bold ml-2  mb-2'>Upcoming Movies</p>
+                <p className='text-xl font-bold ml-2 text-white mb-2'>Upcoming Movies</p>
                 <MovieCarousal movies={upcomingMovies} />
             </div>
 
