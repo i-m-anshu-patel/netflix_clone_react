@@ -5,7 +5,7 @@ const MovieCarousal = ({movies}) => {
   return (
     <div className='flex overflow-x-scroll no-scrollbar'>
       {movies && movies.map((movie) => (
-        <MovieCard movie={movie} />
+        <MovieCard key={movie.id} movie={movie} />
       ))}
     </div>
   )
