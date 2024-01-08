@@ -23,7 +23,7 @@ const useFetchData = (url) => {
 
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [url]);
 
     return data;
 };

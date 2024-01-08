@@ -15,3 +15,6 @@ export const POPULAR_MOVIES = "https://api.themoviedb.org/3/movie/popular"
 export const TOP_RATED_MOVIES = "https://api.themoviedb.org/3/movie/top_rated"
 
 export const UPCOMING_MOVIES = "https://api.themoviedb.org/3/movie/upcoming"
+
+export const SEARCH_MOVIES_PART1 = "https://api.themoviedb.org/3/search/movie?query="
+export const SEARCH_MOVIES_PART2 = "&include_adult=true&language=en-US&page=1"

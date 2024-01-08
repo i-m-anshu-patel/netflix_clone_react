@@ -1,11 +1,14 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import useFetchData from '../utils/useFetchData'
+import { SEARCH_MOVIES_PART1, SEARCH_MOVIES_PART2 } from '../utils/constants'
 
-const SearchBar = () => {
+const SearchBar = ({setSearchText}) => {
     const searchText = useRef(null)
     const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log(searchText.current.value)
+        setSearchText(searchText.current.value);
     }
+
     
   return (
     <div className='pt-[6%] flex justify-center'>
