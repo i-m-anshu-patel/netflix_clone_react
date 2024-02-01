@@ -1,6 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
-import useFetchData from '../utils/useFetchData'
-import { SEARCH_MOVIES_PART1, SEARCH_MOVIES_PART2 } from '../utils/constants'
+import React, { useRef } from 'react'
 
 const SearchBar = ({setSearchText}) => {
     const searchText = useRef(null)
